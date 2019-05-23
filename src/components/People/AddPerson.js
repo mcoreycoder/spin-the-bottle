@@ -4,6 +4,8 @@ import { TextField, Button } from '@material-ui/core'
 
 const Form = styled.form`
   padding: 16px;
+  border: solid blue;
+  width: 30%
 `
 
 const FormGroup = styled.div``
@@ -21,7 +23,7 @@ export default ({ onAdded }) => {
         }}
       >
         <FormGroup>
-          <TextField label="Name" margin="normal" fullWidth value={name} onChange={e => setName(e.target.value)} />
+          <TextField label="Name" margin="normal" /*fullWidth*/ value={name} onChange={e => setName(e.target.value)} />
         </FormGroup>
         <FormGroup>
           <Button variant="contained" color="primary" type="submit">
@@ -29,6 +31,7 @@ export default ({ onAdded }) => {
           </Button>
         </FormGroup>
       </Form>
+      
     </>
   )
 }
